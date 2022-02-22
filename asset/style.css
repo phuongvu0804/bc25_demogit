@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #34A22D;
+}
+
+header {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+}
+
+.logo i{
+    color: var(--primary-color);
+    font-size: 50px;
+}
+
+.logo span{
+    font-size: 36px;
+}
+
+.menu li {
+    margin: 0 1rem;
+}
+
+.menu li::after{
+    content: "";
+    background: var(--primary-color);
+    width: 0;
+    height: 2px;
+    display: block;
+    transition: width 0.3s linear;
+}
+
+.menu li:hover::after,
+.menu li.active::after {
+    width: 100%;
+}
+
+/* Carousel */
+.carousel-item {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-item:nth-child(1) {
+    background-image: url(./image/finland.jpg); 
+}
+
+.carousel-item:nth-child(2) {
+    background-image: url(./image/mountains-1.jpg);
+}
+
+.carousel-item:nth-child(3) {
+    background-image: url(./image/mountains.jpg);
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel__thumb {
+    width: 140px;
+    margin: 0 auto;
+}
+
+.carousel__thumb img{
+    width: 100%;
+    border-radius: 50%;
+}
